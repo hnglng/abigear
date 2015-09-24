@@ -46,6 +46,7 @@ public class ShiroLoginTests {
         subject.logout();  
     }  
     
+    /*
     @Test
     public void testJDBCRealm() {
         //1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager
@@ -73,6 +74,7 @@ public class ShiroLoginTests {
         //6、退出
         subject.logout();
     }
+    */
     
     @After
     public void tearDown() throws Exception {

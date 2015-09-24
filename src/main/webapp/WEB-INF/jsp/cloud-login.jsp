@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>login page</h1>
+<h1>cloud-login.jsp</h1>
+
 </body>
 </html>

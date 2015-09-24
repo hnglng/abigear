@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>login page</h1>
+<h1>cloud.jsp</h1>
+
 </body>
 </html>
+<script src="../../js/lib/requirejs-2.1.20.js" data-main="../../js/abigear/page/cloud" defer async="true" ></script>
