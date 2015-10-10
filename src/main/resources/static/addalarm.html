@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinese Mobile</title>
+<link type="text/css" href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="css/spinningwheel.css" type="text/css" media="all" />
+<script src="script/jquery 1.11.3.js" type="text/javascript"></script>
+<script src="script/script.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+ <!-- header -->
+<header class="alerm_header alerm_header_edit">
+	<article class="alerm_content">
+    	<div class="alerm_text">
+        <a href="#">闹钟</a>
+        <a href="#" class="edit_alerm">完成</a>
+        <a href="#" class="add_alerm add_page_alram">存储</a>
+        </div>
+    </article>
+</header>
+<!-- /header -->
+<!-- section1 -->
+<section class="clock">
+	<article>
+        	<button class="time" onclick="openBirthDate()">birth date</button>
+    </article>
+</section>
+<!-- /section1 -->
+<!--section2 -->
+<section class="section_edit_alerm section_add_alram">
+	<article>
+		<div class="edit_list add_list">
+        	<ul>
+            <li><a href="#"><span class="edit_one">重复</span></a></li>
+            <li><a href="#"><span class="edit_one">标签</span></a></li>
+            <li><a href="#"><span class="edit_one">铃声</span></a></li>
+            <li><a href="#"><span class="edit_one">设备</span></a></li>
+            <li><a href="#"><span class="edit_one">稍后提醒</span></a>
+            <div class="on_off on_off_add on_off_1">
+            	<div class="on on_add off_active">
+                </div>
+            </div>
+            </li>
+            <li class="end_text"><span class="red_text">删除闹钟</span></li>
+            </ul>
+        </div>
+	</article>
+</section>
+<!-- /section2 -->
+<!-- footer -->
+<footer>
+	<article>
+    	<ul>
+		<li><a href="#"><img src="images/Home.png" alt="home">首页</a></li>
+        <li><a href="#"><img src="images/Profile.png" alt="home">我的</a></li>
+        <ul>
+    </article>
+</footer>
+    <!-- /footer -->
+    <!-- CLOCK -->
+    <!-- /CLOCK -->
+    <script type="text/javascript" src="script/spinningwheel.js"></script>
+<script type="text/javascript">
+/*function openWeight() {
+	
+	var numbers = { 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9 };
+	SpinningWheel.addSlot(numbers, 'right');
+	SpinningWheel.addSlot(numbers, 'right');
+	SpinningWheel.addSlot(numbers, 'right');
+	SpinningWheel.addSlot({ separator: '.' }, 'readonly shrink');
+	SpinningWheel.addSlot(numbers, 'right');
+	SpinningWheel.addSlot({ Kg: 'Kg', Lb: 'Lb', St: 'St' }, 'shrink');
+	
+	SpinningWheel.setCancelAction(cancel);
+	SpinningWheel.setDoneAction(done);
+	
+	SpinningWheel.open();
+}*/
+
+function openBirthDate() {
+	var now = new Date();
+	var days = { };
+	var years = { 1: '上午', 2:'下午' };
+	var months = { 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12' };
+	for(
+	 var i = 0; i < 60; i += 1 ) {
+		days[i] = i;
+	}
+
+	/*for( i = now.getFullYear()-100; i < now.getFullYear()+1; i += 1 ) {
+		years[i] = i;
+	}*/
+
+	SpinningWheel.addSlot(years, 'right', 1999);
+	SpinningWheel.addSlot(months, '', 4);
+	SpinningWheel.addSlot(days, 'right', 12);
+	
+	SpinningWheel.setCancelAction(cancel);
+	SpinningWheel.setDoneAction(done);
+	
+	SpinningWheel.open();
+}
+
+/*function openOneSlot() {
+	SpinningWheel.addSlot({1: 'Ichi', 2: 'Ni', 3: 'San', 4: 'Shi', 5: 'Go'});
+	
+	SpinningWheel.setCancelAction(cancel);
+	SpinningWheel.setDoneAction(done);
+	
+	//SpinningWheel.open();
+}*/
+
+function done() {
+	var results = SpinningWheel.getSelectedValues();
+	//document.getElementById('result').innerHTML = 'values: ' + results.values.join(' ') + '<br />keys: ' + results.keys.join(', ');
+}
+
+function cancel() {
+	document.getElementById('result').innerHTML = 'cancelled!';
+}
+
+
+window.addEventListener('load', function(){ setTimeout(function(){ window.scrollTo(0,0); }, 10); }, true);
+</script>
+</body>
+</html>

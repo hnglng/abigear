@@ -18,6 +18,7 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView getLoginPage(@RequestParam Optional<String> error) {
         LOGGER.debug("Getting login page, error={}", error);
+        
         return new ModelAndView("login", "error", error);
     }
 
