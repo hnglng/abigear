@@ -1,0 +1,523 @@
+@import url('fonts.css');
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+a {
+	text-decoration:none;
+}
+h1 {
+	margin:0;
+	padding:0;
+	font-family: 'proxima_nova_ltlight';
+	font-weight:lighter;
+	font-size:30px;
+}
+header {
+	width:100%;
+	float:left;
+}
+header article {
+	width:90%;
+	margin:auto;
+}
+.header {
+	background:#dfe4e8;
+	float:left;
+	width:100%;
+	border-radius:10px;
+	position:relative;
+}
+.header span {
+	width:100%;
+	float:left;
+	text-align:center;
+	padding:10px 0;
+	color:#91979d;
+	font-size:30px;
+}
+.refresh {
+	 position: absolute;
+    right: 10px;
+    text-align: right !important;
+}
+.refresh a {
+	background:url(../images/refresh.png) no-repeat center;
+	background-size:100%;
+	width:30px;
+	height:30px;
+	margin-top:4px;
+	font-size:0; 
+	float:right; 
+}
+footer {
+	width:100%;
+	position:fixed;
+	float:left;
+	bottom:0;
+	z-index:1;
+	background:#f4f4f4;
+}
+footer article {
+	width:100%;
+	float:left;
+}
+footer article ul {
+	list-style-type:none;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+footer article ul li {
+	width:calc(50% - 1px);
+	float:left;
+	text-align:center;
+	margin:15px 0;
+}
+footer article ul li:first-child {
+	 border-left:1px solid #dfe2e6;
+}
+footer article a {
+	font-size:20px;
+	color:#5b6972;
+	width:auto;
+	letter-spacing:2px;
+}
+footer article a img {
+	width:25px;
+	margin:0 10px -3px 0px;
+}
+/*Home*/
+.tabs {
+	width:100%;
+	float:left;
+}
+.top_tabs {
+	width:100%;
+	float:left;
+}
+.top_tabs a {
+	font-size:40px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-align:center;
+	width:50%;
+	float:left;
+	padding:15px 0;
+	background:#006db8;
+	float:left;
+	background:#006db8;
+	margin-bottom: 15px;
+}
+.tri-down {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 1em;
+    border-bottom: 1px solid #fff;
+    background: #005fa0 !important;
+  }
+.tri-down:before, .tri-down:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+  }
+.tri-down:before {
+    bottom: -16px;
+    left: 40%;
+    border-top-color: #fff;
+    border-width: 16px;
+  }
+.tri-down:after {
+    bottom: -15px;
+    left: 40%;
+    border-top-color: #005fa0;
+    border-width: 15px;
+}
+.active_tab {
+ 	background:#005fa0;
+}
+/*Home*/
+/*PersonalCenter*/
+.content {
+	width:100%;
+	float:left;
+}
+.content_tabs {
+	float: left;
+    position:relative;
+	width: 100%;
+}
+.content_tabs a {
+    background: #006db8 none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.content_tabs a img {
+	width:50%;
+	max-width:90px;
+}
+.backarrow {
+	position:absolute;
+	text-align:left !important;
+	width:15px !important;
+	left:20px;
+	height:8px;
+	background:url(../images/back_arrow_image.png) no-repeat scroll center center / 100% auto !important;
+	background-size:100%;
+	font-size:0 !important;
+	margin-top:14px;
+	z-index:2;
+}
+.personal_center_banner {
+	width:100%;
+	float:left;
+	background:url(../images/personal_banner.png) no-repeat center;
+	background-size:cover;
+}
+.personal_center_article {
+	width:90%;
+	margin:auto;
+}
+.personal_center_content {
+	width:100%;
+	float:left;
+	padding:20px 0;
+}
+.profile_banner_image_girl {
+	float:left;
+	width:30%;
+	max-width:90px;
+}
+.profile_banner_image_girl a img {
+	width:100%;
+}
+.profile_content {
+	width:calc(68% - 15px);
+	float:left;
+	max-width:300px;
+	margin-left:15px;
+}
+.profile_content h1 {
+	float:left;
+	color:#fff;
+	margin-top:4px;
+}
+.profile_number {
+	width:100%;
+	margin-top:20px;
+	float:left;
+}
+.profile_number .profile_first_span {
+	width:50%;
+	float:left;
+	color:#888e91;
+	font-size:20px;
+}
+.profile_number .profile_first_span span {
+	font-family: 'proxima_novasemibold';
+	color:#fff;
+	margin-left:8px;
+}
+.personal_bolt_points {
+	width:100%;
+	float:left;
+	margin-bottom:50px;
+}
+.bolt_point_section {
+	width:100%;
+	margin:auto;
+}
+.personal_bolts {
+	width:100%;
+	float:left;
+	margin-top:10px;
+}
+.personal_bolts ul {
+	width:100%;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+.personal_bolts ul li {
+	padding:20px 0 20px 65px;
+	font-size:25px;
+	color:#394043;
+	border-bottom:1px solid #efefef;
+	letter-spacing:2px;
+}
+.personal_bolts ul li.one {
+	background:url(../images/1.png) no-repeat 20px center;
+	background-size:25px;
+}
+.personal_bolts ul li.two {
+	background:url(../images/2.png) no-repeat 20px center, #efefef;
+	background-size:25px;
+}
+.personal_bolts ul li.three {
+	background:url(../images/3.png) no-repeat 20px center;
+	background-size:25px;
+}
+.personal_bolts ul li.four {
+	background:url(../images/4.png) no-repeat 20px center;
+	background-size:25px;
+}
+.personal_bolts ul li.five {
+	background:url(../images/5.png) no-repeat 20px center;
+	background-size:25px;
+	border:none;
+}
+/*PersonalCenter*/
+/*NoAlarm*/
+.alerm_header {
+	width:100%;
+	float:left;
+	background:#006db8;
+	position:fixed;
+	z-index:1;
+}
+.alerm_content {
+	width:90%;
+	margin:auto;
+}
+.alerm_text {
+	width:100%;
+	float:left;
+	position:relative;
+}
+.alerm_text a {
+	text-align:center;
+	width:100%;
+	margin:12px 0;
+	float:left;
+	color:#fff;
+	font-size:25px;
+}
+.add_alerm {
+	position:absolute;
+	right:0;
+	width:20px !important;
+	height:20px;
+	background:url(../images/add_icon.png) no-repeat center;
+	background-size:100%;
+	font-size:0 !important;
+	top:8px;
+	z-index:2
+}
+.no_alerm_text {
+	width:100%;
+	float:left;
+}
+.no_alerm_text article {
+	display:table;
+	float:left;
+	width:100%;
+}
+.no_alerm_text article span {
+	width:100%;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	color:#d8d8d8;
+	font-size:22px;
+	letter-spacing:2px;
+}
+/*NoAlarm*/
+/*EditAlarm*/
+.alerm_header_edit {
+	position:inherit;
+}
+.edit_alerm {
+	position:absolute;
+	left:0;
+	width:auto !important;
+	font-size:20px !important;
+	top:2px;
+	z-index:2
+}
+.section_edit_alerm {
+	width:100%;
+	float:left;
+	margin-bottom:65px;
+}
+.section_edit_alerm article {
+	width:90%;
+	margin:auto;
+}
+.edit_list {
+	width:100%;
+	float:left;
+	margin-top:10px;
+}
+.edit_list ul {
+	margin:0;
+	padding:0;
+	float:left;
+	list-style-type:none;
+	width:100%;
+}
+.edit_list ul li {
+	width:100%;
+	float:left;
+	padding: 12px 5% 12px 0;
+	background:url(../images/next_arrow_image.png) no-repeat 95% center;
+	background-size:10px auto;
+	border-bottom:1px solid #d5d5d5;
+}
+.edit_list ul li a {
+	padding:0 0 0 35px;
+	color:#394043;
+	background:url(../images/remove_alarm.png) no-repeat left center;
+	background-size:21px auto;
+	float:left;
+}
+.edit_list ul li a span {
+	margin-right:5px;
+}
+.edit_one {
+	font-size:18px;
+}
+.edit_time {
+	font-size:22px;
+	font-family: 'proxima_nova_rgregular';
+}
+.edit_three {
+	font-size:18px;
+}
+/*EditAlarm*/
+/*SetAlarm*/
+.add_alarm_background {
+	background:rgba(0,0,0,0.03);
+}
+.section_add_alram {
+	 margin-top: 216px;
+	 background:#fff;	
+}
+.set_alarm {
+	position:relative;
+}
+.set_alarm ul li {
+	background:none;
+}
+.set_alarm ul li a {
+	padding:0;
+	background:none;
+}
+.on_off {
+	position:absolute;
+	right:0;
+	width:50px;
+	background:#f2f4f5;
+	height:30px;
+	border:1px solid #b0b3b4;
+	border-radius:30px;
+}
+.on {
+	position:absolute;
+	width:30px;
+	height:28px;
+	border-radius:50%;
+	border:1px solid #b0b3b4;
+	background:#fff;
+	left:-2;
+	box-shadow:4px 5px 4px rgba(0, 0, 0, 0.03);
+}
+/*SetAlarm*/
+/*AddAlram*/
+.add_page_alram {
+	font-size: 20px !important;
+	background:none;
+	top:2px;
+	width:auto !important;
+}
+.clock {
+	width:100%;
+	float:left;
+	background:(0,0,0,0.1);
+}
+.clock article {
+	width:100%;
+	float:left;
+}
+.clock article img {
+	width:100%;
+	height:auto;
+}
+.add_list ul li a  {
+	padding:0;
+	background:none;
+}
+.on_off_add {
+	right:5%;
+}
+.end_text {
+	background:none !important;
+	border:none;
+}
+.red_text {
+	color:#cc3d3d;
+	width:100%;
+	text-align:center;
+	float:left;
+	font-size:22px; 
+}
+/*clock*/
+#result { margin:10px; background:#aaa; -webkit-border-radius:8px; padding:8px; font-size:18px; }
+.time {
+	display:none !important;
+}
+#sw-header {
+	display:none !important;
+}
+#sw-slots {
+	width:auto !important;
+	min-width:100% !important
+}
+#sw-wrapper {
+	text-align:center !important;
+	transition-duration: 0ms !important;
+	top: 319px !important;
+}
+#sw-slots div {
+	border:none !important;
+}
+#sw-slots-wrapper {
+	max-width:160px !important;
+	margin:auto !important;
+	background:none !important;
+	z-index:1 !important;
+}
+#sw-frame {
+	border-image:url("../images/alarm_background.png")  16 16 16 16 fill !important;
+	 border-style: solid !important;
+    border-width: 16px !important;
+	background:rgba(248,248,248, 0.05) !important;
+	z-index:1 !important;
+}
+#sw-wrapper {
+	background:#fdfdfd !important;
+	z-index:0 !important;
+}
+#sw-slots li {
+	font-family:arial !important;
+	font-size:20px !important;
+	font-weight:normal !important;
+}
+/*clock*/
+/*AddAlram*/

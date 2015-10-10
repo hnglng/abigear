@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>login.jsp</h1>
+<h1>personal-center.jsp</h1>
+
 </body>
 </html>
-<script src="../../js/lib/requirejs-2.1.20.js" data-main="../../js/abigear/page/login" defer async="true" ></script>
+<script src="../../js/lib/requirejs-2.1.20.js" data-main="../../js/abigear/page/personal-center" defer async="true" ></script>
