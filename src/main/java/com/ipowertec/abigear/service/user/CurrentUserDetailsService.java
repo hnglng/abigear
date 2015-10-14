@@ -1,4 +1,4 @@
-package com.ipowertec.abigear.service.currentuser;
+package com.ipowertec.abigear.service.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,9 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.ipowertec.abigear.domain.CurrentUser;
-import com.ipowertec.abigear.domain.User;
-import com.ipowertec.abigear.service.user.UserService;
+import com.ipowertec.abigear.domain.user.CurrentUser;
+import com.ipowertec.abigear.domain.user.User;
 
 @Service
 public class CurrentUserDetailsService implements UserDetailsService {

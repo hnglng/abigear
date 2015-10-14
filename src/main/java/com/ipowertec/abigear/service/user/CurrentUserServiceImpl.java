@@ -1,11 +1,11 @@
-package com.ipowertec.abigear.service.currentuser;
+package com.ipowertec.abigear.service.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.ipowertec.abigear.domain.CurrentUser;
-import com.ipowertec.abigear.domain.Role;
+import com.ipowertec.abigear.domain.user.CurrentUser;
+import com.ipowertec.abigear.domain.user.Role;
 
 @Service
 public class CurrentUserServiceImpl implements CurrentUserService {

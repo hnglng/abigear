@@ -10,8 +10,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.ipowertec.abigear.domain.User;
-import com.ipowertec.abigear.domain.UserCreateForm;
+import com.ipowertec.abigear.domain.user.User;
+import com.ipowertec.abigear.domain.user.UserCreateForm;
 import com.ipowertec.abigear.repository.UserRepository;
 
 @Service

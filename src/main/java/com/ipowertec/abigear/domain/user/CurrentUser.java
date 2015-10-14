@@ -1,4 +1,4 @@
-package com.ipowertec.abigear.domain;
+package com.ipowertec.abigear.domain.user;
 
 import org.springframework.security.core.authority.AuthorityUtils;
 

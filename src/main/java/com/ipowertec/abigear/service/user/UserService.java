@@ -5,8 +5,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.ipowertec.abigear.domain.User;
-import com.ipowertec.abigear.domain.UserCreateForm;
+import com.ipowertec.abigear.domain.user.User;
+import com.ipowertec.abigear.domain.user.UserCreateForm;
 
 @Service
 public interface UserService {

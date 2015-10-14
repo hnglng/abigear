@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import com.ipowertec.abigear.domain.UserCreateForm;
+import com.ipowertec.abigear.domain.user.UserCreateForm;
 
 @Component
 public class UserCreateFormPasswordValidator implements Validator {
