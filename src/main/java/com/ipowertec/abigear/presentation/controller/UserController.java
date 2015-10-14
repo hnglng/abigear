@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ipowertec.abigear.domain.UserCreateForm;
+import com.ipowertec.abigear.domain.user.UserCreateForm;
 import com.ipowertec.abigear.presentation.validator.UserCreateFormValidator;
 import com.ipowertec.abigear.service.user.UserService;
 

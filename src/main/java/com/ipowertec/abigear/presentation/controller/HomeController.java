@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ipowertec.abigear.domain.User;
+import com.ipowertec.abigear.domain.user.User;
 import com.ipowertec.abigear.service.user.UserService;
 
 @Controller
@@ -20,8 +20,8 @@ public class HomeController {
 
     @Autowired
     private UserService userService;
-
-    @RequestMapping("/")
+    
+    @RequestMapping("/home")
     public ModelAndView getHomePage() {
         LOGGER.debug("Getting home page");
 

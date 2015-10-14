@@ -1,4 +1,4 @@
-package com.ipowertec.abigear.domain;
+package com.ipowertec.abigear.domain.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
