@@ -14,11 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ipowertec.abigear.domain.user.Alarm;
-import com.ipowertec.abigear.domain.user.AlarmConfig;
-import com.ipowertec.abigear.domain.user.AlarmConfigForm;
 import com.ipowertec.abigear.domain.user.Device;
+import com.ipowertec.abigear.domain.user.PubAudio;
 import com.ipowertec.abigear.domain.user.ResponsiveGetAlarmInfo;
 import com.ipowertec.abigear.domain.user.ResponsiveGetDeviceInfo;
+import com.ipowertec.abigear.domain.user.ResponsiveGetPubAudioInfo;
 import com.ipowertec.abigear.infrastructure.httpclient.AlarmHttpClient;
 
 @Service
@@ -28,6 +28,7 @@ public class AlarmServiceImpl implements AlarmService{
 	private final String URL4GET_DEVICE = "http://120.25.239.73:5000/api?method=get_device";
 	private final String URL4GET_ALARM = "http://120.25.239.73:5000/api?method=get_alarm";
 	private final String URL4SET_ALARM = "http://120.25.239.73:5000/api?method=set_alarm";
+	private final String URL4GET_PUB_AUDIO = "http://120.25.239.73:5000/api?method=get_pub_audio";
 	
 	@Autowired
     private AlarmHttpClient alarmHttpClient;
@@ -79,6 +80,27 @@ public class AlarmServiceImpl implements AlarmService{
         	allAlarm.add(responsiveGetAlarmInfo.getData());
 		}
 		return allAlarm;
+	}
+	
+	@Override
+	public List<PubAudio> getAllPubAudio(JSONObject requestInfo) {
+		String pubAudioInfo = null;
+		try {
+			pubAudioInfo = alarmHttpClient.sendHttpPost(URL4GET_PUB_AUDIO, requestInfo);
+		} catch (Exception e) {
+			LOGGER.error("Call Get_PUB_AUDIO failed.", e);
+		}
+    	LOGGER.debug("Call Get_PUB_AUDIO Return Information:" + pubAudioInfo);
+    	
+    	System.err.println(pubAudioInfo);
+    	
+    	Map<String, Class<PubAudio>> pubAudio = new HashMap<String, Class<PubAudio>>();  
+    	pubAudio.put("data", PubAudio.class);
+    	ResponsiveGetPubAudioInfo responsiveGetPubAudioInfo = (ResponsiveGetPubAudioInfo)JSONObject.toBean(JSONObject.fromObject(pubAudioInfo), ResponsiveGetPubAudioInfo.class, pubAudio);
+    	
+    	System.err.println(responsiveGetPubAudioInfo.getMsg());
+    	
+		return responsiveGetPubAudioInfo.getData();
 	}
 
 	@Override
