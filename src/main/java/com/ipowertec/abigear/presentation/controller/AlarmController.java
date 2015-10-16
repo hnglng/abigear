@@ -14,15 +14,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ipowertec.abigear.domain.user.Alarm;
 import com.ipowertec.abigear.domain.user.Device;
-import com.ipowertec.abigear.infrastructure.httpclient.AlarmHttpClient;
+import com.ipowertec.abigear.domain.user.PubAudio;
 import com.ipowertec.abigear.service.alarm.AlarmService;
-import com.ipowertec.abigear.service.user.UserService;
 
 @Controller
 public class AlarmController {
@@ -49,6 +47,20 @@ public class AlarmController {
         }
     }
     
+    @RequestMapping("/alarm/getpubaudio")
+    public ModelAndView getPubAudio(HttpServletRequest request) {
+    	String client_type = "user";
+    	String user_name = "test@hifi.com";
+        JSONObject requestInfo = new JSONObject();
+        requestInfo.put("client_type", client_type);
+        requestInfo.put("user_name", user_name);
+        List<PubAudio> allPubAudio = alarmService.getAllPubAudio(requestInfo);
+        System.out.println(allPubAudio.get(0).getRes_md5());
+    	Map<String, List<PubAudio>> map = new HashMap<String, List<PubAudio>>();
+    	map.put("allAlarm", allPubAudio);
+    	return new ModelAndView("", map);
+    }
+    
     @RequestMapping("/alarm/addalarm")
     public String addAlarm(HttpServletRequest request) {
     	JSONObject alarmConfig = new JSONObject();
@@ -61,7 +73,7 @@ public class AlarmController {
 		String a = alarmService.addAlarm(alarmConfig);
 		System.out.println(a);
 
-        return "/alarm/getalarm/xiaomo@hifi.com/";
+        return "";
     }
     
     @RequestMapping("/alarm/editalarm")
@@ -74,12 +86,12 @@ public class AlarmController {
     	alarmConfig.put("state", 1);
     	alarmConfig.put("alarmcfg", "{'call_at':'15:05','week':[1,2,3,4,5], 'repeat':5,   'continue_time':30,  'blank_time':30}");
     	alarmService.editAlarm(alarmConfig);
-        return new ModelAndView("setalarm");
+        return new ModelAndView("");
     }
     
     @RequestMapping("/alarm/deletealarm")
     public ModelAndView deleteAlarm(HttpServletRequest request, @RequestParam String alarmId) {
     	
-        return new ModelAndView("setalarm");
+        return new ModelAndView("");
     }
 }
